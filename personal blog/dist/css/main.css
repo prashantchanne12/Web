@@ -141,7 +141,7 @@ input[class^="btn-"]:hover {
 #blog .blog-container {
   margin-top: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto, 20%);
+  grid-template-columns: repeat(auto, 10%);
   grid-template-areas: "blogs blogs blogs blogs blogs sidebar"; }
 
 #blog .blogs {
@@ -150,8 +150,8 @@ input[class^="btn-"]:hover {
 #blog aside .aside-content {
   display: flex;
   flex-direction: column;
-  background: white;
   grid-area: sidebar;
+  background: #0985e30c;
   border: 1px solid #ebebeb;
   padding: 0.3rem 0.7rem; }
 
@@ -172,7 +172,7 @@ input[class^="btn-"]:hover {
   border-bottom: 1px solid #ebebeb;
   padding-bottom: 1rem; }
 
-#blog aside .popular-posts-title {
+#blog aside .aside-title {
   display: flex;
   align-items: center;
   margin-top: 1rem; }
@@ -194,6 +194,23 @@ input[class^="btn-"]:hover {
     width: 150px;
     height: 100px;
     padding-right: 10px; }
+
+#blog aside .newsletter {
+  padding: 2rem 3rem;
+  border-bottom: 1px solid #ebebeb; }
+  #blog aside .newsletter input {
+    padding: 0.5rem; }
+
+#blog aside .post-categories {
+  padding: 2rem 1.5rem; }
+  #blog aside .post-categories .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dotted #d6d6d6; }
+  #blog aside .post-categories .title:hover {
+    color: #0984e3;
+    border-color: #0984e3; }
 
 #blog .blog-hr {
   grid-area: blogHr;
@@ -227,54 +244,70 @@ input[class^="btn-"]:hover {
 #blog .blog-vr {
   height: 550px;
   grid-area: blogVr;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   display: flex; }
   #blog .blog-vr img {
     width: 85%; }
-  #blog .blog-vr .blog-1 {
+  #blog .blog-vr .blog-1,
+  #blog .blog-vr .blog-3 {
     position: relative; }
-    #blog .blog-vr .blog-1 .blog-content {
+    #blog .blog-vr .blog-1 .blog-content,
+    #blog .blog-vr .blog-3 .blog-content {
       position: absolute;
       bottom: 0;
+      top: 30%;
       left: 10%;
       right: 25%;
       background: #fff;
       padding: 1rem 1rem;
       border-radius: 1px;
       line-height: 2; }
-    #blog .blog-vr .blog-1 .blog-header {
+    #blog .blog-vr .blog-1 .blog-header,
+    #blog .blog-vr .blog-3 .blog-header {
       align-items: center; }
-      #blog .blog-vr .blog-1 .blog-header .date {
+      #blog .blog-vr .blog-1 .blog-header .date,
+      #blog .blog-vr .blog-3 .blog-header .date {
         padding-left: 0.5rem; }
-        #blog .blog-vr .blog-1 .blog-header .date i {
+        #blog .blog-vr .blog-1 .blog-header .date i,
+        #blog .blog-vr .blog-3 .blog-header .date i {
           color: lightslategrey;
           margin-right: 5px; }
-      #blog .blog-vr .blog-1 .blog-header .likes {
+      #blog .blog-vr .blog-1 .blog-header .likes,
+      #blog .blog-vr .blog-3 .blog-header .likes {
         padding-left: 0.5rem; }
-        #blog .blog-vr .blog-1 .blog-header .likes i {
+        #blog .blog-vr .blog-1 .blog-header .likes i,
+        #blog .blog-vr .blog-3 .blog-header .likes i {
           color: #ff002b;
           margin-right: 5px; }
-  #blog .blog-vr .blog-2 {
+  #blog .blog-vr .blog-2,
+  #blog .blog-vr .blog-4 {
     position: relative; }
-    #blog .blog-vr .blog-2 .blog-content {
+    #blog .blog-vr .blog-2 .blog-content,
+    #blog .blog-vr .blog-4 .blog-content {
       position: absolute;
       bottom: 0;
       left: 10%;
       right: 25%;
+      top: 30%;
       background: #fff;
       padding: 1rem 1rem;
       border-radius: 1px;
       line-height: 2; }
-    #blog .blog-vr .blog-2 .blog-header {
+    #blog .blog-vr .blog-2 .blog-header,
+    #blog .blog-vr .blog-4 .blog-header {
       align-items: center; }
-      #blog .blog-vr .blog-2 .blog-header .date {
+      #blog .blog-vr .blog-2 .blog-header .date,
+      #blog .blog-vr .blog-4 .blog-header .date {
         padding-left: 0.5rem; }
-        #blog .blog-vr .blog-2 .blog-header .date i {
+        #blog .blog-vr .blog-2 .blog-header .date i,
+        #blog .blog-vr .blog-4 .blog-header .date i {
           color: lightslategrey;
           margin-right: 5px; }
-      #blog .blog-vr .blog-2 .blog-header .likes {
+      #blog .blog-vr .blog-2 .blog-header .likes,
+      #blog .blog-vr .blog-4 .blog-header .likes {
         padding-left: 0.5rem; }
-        #blog .blog-vr .blog-2 .blog-header .likes i {
+        #blog .blog-vr .blog-2 .blog-header .likes i,
+        #blog .blog-vr .blog-4 .blog-header .likes i {
           color: #ff002b;
           margin-right: 5px; }
 

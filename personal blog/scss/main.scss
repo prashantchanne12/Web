@@ -189,7 +189,7 @@ input[class^="btn-"]:hover {
   .blog-container {
     margin-top: 1.5rem;
     display: grid;
-    grid-template-columns: repeat(auto, 20%);
+    grid-template-columns: repeat(auto, 10%);
     grid-template-areas: "blogs blogs blogs blogs blogs sidebar";
   }
 
@@ -200,8 +200,9 @@ input[class^="btn-"]:hover {
     .aside-content {
       display: flex;
       flex-direction: column;
-      background: white;
       grid-area: sidebar;
+      background: #0985e30c;
+
       border: 1px solid #ebebeb;
       padding: 0.3rem 0.7rem;
     }
@@ -227,7 +228,7 @@ input[class^="btn-"]:hover {
       }
     }
 
-    .popular-posts-title {
+    .aside-title {
       display: flex;
       align-items: center;
       margin-top: 1rem;
@@ -253,6 +254,28 @@ input[class^="btn-"]:hover {
           height: 100px;
           padding-right: 10px;
         }
+      }
+    }
+
+    .newsletter {
+      padding: 2rem 3rem;
+      input {
+        padding: 0.5rem;
+      }
+      border-bottom: 1px solid #ebebeb;
+    }
+
+    .post-categories {
+      padding: 2rem 1.5rem;
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px dotted rgb(214, 214, 214);
+      }
+      .title:hover {
+        color: $main-color;
+        border-color: $main-color;
       }
     }
   }
@@ -299,17 +322,19 @@ input[class^="btn-"]:hover {
   .blog-vr {
     height: 550px;
     grid-area: blogVr;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     display: flex;
     img {
       width: 85%;
     }
-    .blog-1 {
+    .blog-1,
+    .blog-3 {
       position: relative;
 
       .blog-content {
         position: absolute;
         bottom: 0;
+        top: 30%;
         left: 10%;
         right: 25%;
         background: #fff;
@@ -338,7 +363,8 @@ input[class^="btn-"]:hover {
         }
       }
     }
-    .blog-2 {
+    .blog-2,
+    .blog-4 {
       position: relative;
 
       .blog-content {
@@ -346,6 +372,7 @@ input[class^="btn-"]:hover {
         bottom: 0;
         left: 10%;
         right: 25%;
+        top: 30%;
         background: #fff;
         padding: 1rem 1rem;
         border-radius: 1px;
