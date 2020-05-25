@@ -1,0 +1,333 @@
+// Tablets and Smaller
+@media (max-width: 800px) {
+  #header {
+    &-content {
+      .image {
+        height: 90vh;
+        width: 100%;
+      }
+
+      .header-text {
+        position: absolute;
+        background: #fff;
+        padding: 1rem;
+        top: 50%;
+        left: 50%;
+        right: 10%;
+      }
+    }
+  }
+
+  #blog {
+    .blog-container {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        "blogs"
+        "sidebar";
+    }
+
+    .blog-hr,
+    .blog-hr-2 {
+      img {
+        width: 90%;
+      }
+      .blog-content {
+        position: absolute;
+        background: #fff;
+        padding: 0.5 0.5rem;
+        bottom: 5%;
+        left: 10%;
+        right: 20%;
+        border-radius: 1px;
+      }
+      .blog-header {
+        display: flex;
+        flex-direction: column;
+        .date {
+          padding: 0;
+          i {
+            color: lightslategrey;
+            margin: 0;
+          }
+        }
+        .likes {
+          padding: 0;
+          i {
+            color: rgb(255, 0, 43);
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .blog-vr {
+      height: 1000px;
+      margin-top: 0;
+
+      grid-template-columns: 1fr;
+      img {
+        width: 100%;
+      }
+      .blog-1,
+      .blog-3 {
+        position: relative;
+
+        .blog-content {
+          position: absolute;
+          padding: 0.5 0.5rem;
+          bottom: 0;
+          top: 40%;
+          left: 5%;
+          right: 5%;
+          background: #fff;
+          border-radius: 1px;
+          line-height: 2;
+        }
+      }
+      .blog-2,
+      .blog-4 {
+        position: relative;
+
+        .blog-content {
+          position: absolute;
+          padding: 0.5 0.5rem;
+          bottom: 0;
+          left: 5%;
+          top: 40%;
+          right: 5%;
+          background: #fff;
+          border-radius: 1px;
+          line-height: 2;
+        }
+      }
+    }
+
+    aside {
+      .newsletter {
+        padding: 1rem 2rem;
+        input {
+          padding: 0.5rem;
+        }
+        border-bottom: 1px solid #ebebeb;
+      }
+    }
+  }
+
+  #main-footer {
+    padding: 2rem 1rem;
+
+    .footer-container {
+      display: block;
+
+      .about-us {
+        border-bottom: 1px dotted rgb(88, 88, 88);
+      }
+      .newsletter {
+        padding-top: 5px;
+        padding-bottom: 1.2rem;
+        input {
+          padding: 0.5rem;
+        }
+        border-bottom: 1px dotted rgb(88, 88, 88);
+      }
+
+      .follow-us {
+        ul {
+          display: flex;
+          justify-content: center;
+          padding-top: 5px;
+          li {
+            padding: 0.6rem 0.5rem;
+            i {
+              color: #fff;
+            }
+          }
+        }
+
+        p {
+          display: none;
+        }
+      }
+
+      .footer-title {
+        display: block;
+      }
+    }
+  }
+}
+
+// Smartphones
+@media (max-width: 500px) {
+  #main-nav {
+    padding-left: 6rem;
+    justify-self: center;
+    justify-content: center;
+    .fab {
+      display: none;
+    }
+  }
+
+  #header {
+    &-content {
+      .image {
+        position: relative;
+        background: $bg-image no-repeat left left / cover;
+        height: 90vh;
+        width: 100%;
+      }
+
+      .header-text {
+        position: absolute;
+        background: #fff;
+        padding: 1rem;
+        top: 50%;
+        left: 10%;
+        right: 10%;
+        h2 {
+          font-size: 1.5rem;
+        }
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  #blog {
+    .blog-container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "blogs"
+        "sidebar";
+    }
+
+    .blog-hr,
+    .blog-hr-2 {
+      img {
+        width: 100%;
+      }
+      .blog-content {
+        position: absolute;
+        background: #fff;
+        padding: 0.5 0.5rem;
+        bottom: 10%;
+        left: 5%;
+        right: 5%;
+        border-radius: 1px;
+      }
+      .blog-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .date {
+          padding: 0;
+          i {
+            color: lightslategrey;
+            margin: 0;
+          }
+        }
+        .likes {
+          padding: 0;
+          i {
+            color: rgb(255, 0, 43);
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .blog-vr {
+      height: 1000px;
+      margin-top: 0;
+
+      grid-template-columns: 1fr;
+      img {
+        width: 100%;
+      }
+      .blog-1,
+      .blog-3 {
+        position: relative;
+
+        .blog-content {
+          position: absolute;
+          padding: 0.5 0.5rem;
+          bottom: 0;
+          top: 40%;
+          left: 5%;
+          right: 5%;
+          background: #fff;
+          border-radius: 1px;
+          line-height: 2;
+        }
+      }
+      .blog-2,
+      .blog-4 {
+        position: relative;
+
+        .blog-content {
+          position: absolute;
+          padding: 0.5 0.5rem;
+          bottom: 0;
+          left: 5%;
+          top: 40%;
+          right: 5%;
+          background: #fff;
+          border-radius: 1px;
+          line-height: 2;
+        }
+      }
+    }
+
+    aside {
+      .newsletter {
+        padding: 1rem 2rem;
+        input {
+          padding: 0.5rem;
+        }
+        border-bottom: 1px solid #ebebeb;
+      }
+    }
+  }
+
+  #main-footer {
+    padding: 2rem 1rem;
+
+    .footer-container {
+      display: block;
+
+      .about-us {
+        border-bottom: 1px dotted rgb(88, 88, 88);
+      }
+      .newsletter {
+        padding-top: 5px;
+        padding-bottom: 1.2rem;
+        input {
+          padding: 0.5rem;
+        }
+        border-bottom: 1px dotted rgb(88, 88, 88);
+      }
+
+      .follow-us {
+        ul {
+          display: flex;
+          justify-content: center;
+          padding-top: 5px;
+          li {
+            padding: 0.6rem 0.5rem;
+            i {
+              color: #fff;
+            }
+          }
+        }
+
+        p {
+          display: none;
+        }
+      }
+
+      .footer-title {
+        display: block;
+      }
+    }
+  }
+}

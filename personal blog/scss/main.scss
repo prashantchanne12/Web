@@ -323,7 +323,8 @@ input[class^="btn-"]:hover {
     height: 550px;
     grid-area: blogVr;
     margin-top: 2rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     img {
       width: 85%;
     }
@@ -480,3 +481,5 @@ input[class^="btn-"]:hover {
     }
   }
 }
+
+@import "media";
