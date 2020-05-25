@@ -1,0 +1,16 @@
+// Set text color
+@function set-text-color($color){
+    @if (lightness($color) > 50) {
+        // If color is more light return dark else return light
+        @return #333;
+    } @else{
+        @return #fff;
+    }
+}
+
+// Transform mixin
+@mixin transform($property) {
+    --webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
