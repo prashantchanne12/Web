@@ -58,6 +58,14 @@ p {
   padding: 0.4rem 1rem;
   border-radius: 3px; }
 
+.btn-main {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #0984e3;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 3px; }
+
 .category {
   display: inline-block;
   color: #333;
@@ -133,8 +141,11 @@ input[class^="btn-"]:hover {
 #blog .blog-container {
   margin-top: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(3fr, 1fr);
-  grid-template-areas: "blogHr blogHr blogHr sidebar" "blogVr blogVr blogVr sidebar" "blogHr2 blogHr2 blogHr2  sidebar"; }
+  grid-template-columns: repeat(auto, 20%);
+  grid-template-areas: "blogs blogs blogs blogs blogs sidebar"; }
+
+#blog .blogs {
+  grid-area: blogs; }
 
 #blog aside .aside-content {
   display: flex;
@@ -169,9 +180,20 @@ input[class^="btn-"]:hover {
 #blog aside .popular-posts h2 {
   font-size: 2.1rem; }
 
-#blog aside .popular-posts .post-content img {
-  width: 150px;
-  height: 100px; }
+#blog aside .popular-posts .post-content {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 0.3rem; }
+  #blog aside .popular-posts .post-content p {
+    margin: 0;
+    padding: 0;
+    color: lightslategray; }
+  #blog aside .popular-posts .post-content img {
+    width: 150px;
+    height: 100px;
+    padding-right: 10px; }
 
 #blog .blog-hr {
   grid-area: blogHr;
@@ -211,8 +233,6 @@ input[class^="btn-"]:hover {
     width: 85%; }
   #blog .blog-vr .blog-1 {
     position: relative; }
-    #blog .blog-vr .blog-1 img {
-      width: 85%; }
     #blog .blog-vr .blog-1 .blog-content {
       position: absolute;
       bottom: 0;
@@ -287,3 +307,25 @@ input[class^="btn-"]:hover {
       #blog .blog-hr-2 .blog-header .likes i {
         color: #ff002b;
         margin-right: 5px; }
+
+#main-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 4rem 2rem; }
+  #main-footer .footer-container {
+    display: flex; }
+    #main-footer .footer-container .about-us {
+      flex: 1; }
+    #main-footer .footer-container .newsletter {
+      flex: 1;
+      padding-bottom: 1.2rem; }
+      #main-footer .footer-container .newsletter input {
+        padding: 0.5rem; }
+    #main-footer .footer-container .follow-us ul {
+      display: flex; }
+      #main-footer .footer-container .follow-us ul li {
+        padding: 0.5rem 0.5rem; }
+        #main-footer .footer-container .follow-us ul li i {
+          color: #fff; }
+    #main-footer .footer-container .footer-title {
+      display: block; }

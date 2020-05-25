@@ -79,6 +79,14 @@ p {
     padding: 0.4rem 1rem;
     border-radius: 3px;
   }
+  &-main {
+    cursor: pointer;
+    display: inline-block;
+    background-color: $main-color;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 3px;
+  }
 }
 
 .category {
@@ -181,13 +189,13 @@ input[class^="btn-"]:hover {
   .blog-container {
     margin-top: 1.5rem;
     display: grid;
-    grid-template-columns: repeat(3fr, 1fr);
-    grid-template-areas:
-      "blogHr blogHr blogHr sidebar"
-      "blogVr blogVr blogVr sidebar"
-      "blogHr2 blogHr2 blogHr2  sidebar";
+    grid-template-columns: repeat(auto, 20%);
+    grid-template-areas: "blogs blogs blogs blogs blogs sidebar";
   }
 
+  .blogs {
+    grid-area: blogs;
+  }
   aside {
     .aside-content {
       display: flex;
@@ -230,12 +238,20 @@ input[class^="btn-"]:hover {
         font-size: 2.1rem;
       }
       .post-content {
-        // display: flex;
-        // justify-content: space-around;
-        // margin-top: 1rem;
+        display: flex;
+        margin-top: 1rem;
+        align-items: center;
+        border-bottom: 1px solid #ebebeb;
+        padding-bottom: 0.3rem;
+        p {
+          margin: 0;
+          padding: 0;
+          color: lightslategray;
+        }
         img {
           width: 150px;
           height: 100px;
+          padding-right: 10px;
         }
       }
     }
@@ -289,10 +305,8 @@ input[class^="btn-"]:hover {
       width: 85%;
     }
     .blog-1 {
-      img {
-        width: 85%;
-      }
       position: relative;
+
       .blog-content {
         position: absolute;
         bottom: 0;
@@ -397,6 +411,45 @@ input[class^="btn-"]:hover {
           margin-right: 5px;
         }
       }
+    }
+  }
+}
+
+// footer
+
+#main-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 4rem 2rem;
+
+  .footer-container {
+    display: flex;
+
+    .about-us {
+      flex: 1;
+    }
+    .newsletter {
+      flex: 1;
+      padding-bottom: 1.2rem;
+      input {
+        padding: 0.5rem;
+      }
+    }
+
+    .follow-us {
+      ul {
+        display: flex;
+        li {
+          padding: 0.5rem 0.5rem;
+          i {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .footer-title {
+      display: block;
     }
   }
 }
