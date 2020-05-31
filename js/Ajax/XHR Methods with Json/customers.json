@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Prashant Channe",
+    "company": "Hello World",
+    "phone": 8002346789
+  },
+  {
+    "id": 2,
+    "name": "Logan Paul",
+    "company": "Swiss",
+    "phone": 8967354678
+  },
+  {
+    "id": 3,
+    "name": "Jake Paul",
+    "company": "JK Finland",
+    "phone": 7865432678
+  },
+  {
+    "id": 4,
+    "name": "Margo Robbie",
+    "company": "Wire.co",
+    "phone": 8974564323
+  }
+]
