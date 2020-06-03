@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Raleway&display=swap");
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.header-title #title {
+  font-size: 2rem;
+  color: #0984e3;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
