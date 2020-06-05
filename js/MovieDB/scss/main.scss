@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#nav-links {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background: #222;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: scroll;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+// Utilities
+.btn {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 2px;
+  font-weight: bold;
+
+  &-main {
+    color: #fff;
+    background-color: rgb(0, 141, 235);
+  }
+}
+
+// NAVBAR
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 8vh;
+  background: rgba($color: #3a3a3a, $alpha: 0.5);
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  #nav-links {
+    display: flex;
+    justify-content: center;
+
+    li {
+      padding: 1rem;
+    }
+  }
+
+  .burger {
+    cursor: pointer;
+    display: none;
+    div {
+      width: 25px;
+      height: 1.4px;
+      background: #fff;
+      margin: 5px;
+      transition: all 0.3s;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  #main-nav {
+    #nav-links {
+      position: absolute;
+      right: 0;
+      background: rgba($color: #3a3a3a, $alpha: 0.5);
+      height: 92vh;
+      top: 8vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem;
+      transform: translateX(100%);
+      transition: transform 0.5 ease-in-out;
+
+      li {
+        opacity: 0;
+      }
+    }
+
+    .burger {
+      cursor: pointer;
+      display: block;
+      div {
+        width: 25px;
+        height: 1.4px;
+        background: #fff;
+        margin: 5px;
+      }
+    }
+  }
+
+  #search-bar {
+    flex-direction: column;
+
+    #input-value {
+      width: 500px;
+    }
+  }
+}
+
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 3px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+// Search Bar
+#input-value {
+  width: 760px;
+  font-weight: 400;
+  padding: 0.55rem 0.75rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #09f;
+  color: slategray;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+#search-bar {
+  display: flex;
+  align-items: center;
+  align-items: center;
+}
+
+.btn-main {
+  margin-left: 1rem;
+}
+
+// Image Searchable
+#movie-searchabel {
+  margin-top: 1.2rem;
+  section {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    img {
+      width: 300px;
+      height: 500px;
+      transition: 250ms all;
+    }
+  }
+}
+
+img:hover {
+  margin-left: 0 5rem;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.content-display {
+  div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0.75rem;
+  }
+}
+
+.content-close {
+  cursor: pointer;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+/*add a shadow to the scrollbar here*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+/*this is the little scrolly dealio in the bar*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #3a3a3a;
+  height: 3px;
+}
+/*nobody needs this little scrollbar corner, I mean really, get rid of it haha*/
+::-webkit-scrollbar-corner {
+  display: none;
+  height: 0px;
+  width: 0px;
+}
+
+.content {
+  display: none;
+}
+
+.content-display {
+  display: block;
+}
