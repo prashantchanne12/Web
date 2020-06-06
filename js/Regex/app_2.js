@@ -31,12 +31,39 @@ re = /hel{3}/;
 re = /hel{1,3}/;
 re = /hel{1,}/; // Must occure atleast 1 time
 
+// --------  Shorthands ---------
 
+re = /\w/;      // word character - alphanumeric (all letters and numbers) or _ --> looks for only single
+re = /\w+/;      // word character - alphanumeric (all letters and numbers) or _ --> one or more
+
+// ?$%^&*
+re = /\W/;      // Non word character - alphanumeric (all letters and numbers) or _ 
+re = /\W+/;      // Non word character - alphanumeric (all letters and numbers) or _ --> one or more
+
+// 0-9
+re = /\d/;      // Match any digit
+re = /\d+/;      // Match any digit --> one or more
+re = /\D/;      // Match any Non digit
+re = /\D+/;      // Match any Non digit --> one or more
+
+// match whitespcae
+re = /\s/;
+// match whitespcae
+re = /\S/;
+// match whitespcae
+re = /\S+/;
+
+// Word boundry
+re = /Hell\b/i;     // Match eaxct word in the string
+
+// Assertions
+re = /x(?=y)/;      // Match x only if followed by y
+re = /x(?!y)/;      // Match x only if ,not followed by y
 
 // String to match
 // const str = 'hello world';
 // const str = 'gray';
-const str = 'helllo';
+const str = 'helllo34?! hell xy';
 
 // Results
 const result = re.exec(str);
