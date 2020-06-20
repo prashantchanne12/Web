@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <h2>Recipes</h2>
+        <ul>
+        </ul>
+        <form>
+            <label for="recipe">Add new recipe:</label>
+            <div class="input-group">
+                <input type="text" name="recipe" id="recipe" class="form-control" required>
+                <div class="input-group-append">
+                    <input type="submit" value="add" class="btn btn-outline-secondary">
+                </div>
+            </div>
+        </form>
+        <button class="btn btn-primary my-4 unsub">Unsubscribe</button>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAkPF99nSCZMVSl3tXS56kPvN-mebnpmoQ",
+            authDomain: "web-app-866d3.firebaseapp.com",
+            databaseURL: "https://web-app-866d3.firebaseio.com",
+            projectId: "web-app-866d3",
+            storageBucket: "web-app-866d3.appspot.com",
+            messagingSenderId: "644372957451",
+            appId: "1:644372957451:web:48e95e0c9cb164ebc37a0e",
+            measurementId: "G-5EH8LKWVC6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+    </script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
