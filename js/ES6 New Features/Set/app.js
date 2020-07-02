@@ -33,3 +33,30 @@ set2.forEach((element) => {
 // Convert to SET to ARRAY
 const setArray = Array.from(set1);
 console.log(setArray);
+
+// Rest with sets
+const nums = new Set([1, 2, 4, 4]);
+console.log(nums);
+
+const arr = [...nums];
+console.log(arr);
+
+// add
+const names = new Set();
+names.add('Logan').add('Jake');
+names.add('Logan')
+
+// delete
+names.delete('Logan');
+
+// size
+console.log(names.size);
+
+// has
+console.log(names.has('Logan'));
+
+console.log(names);
+
+// clear
+names.clear();
+console.log(names);
