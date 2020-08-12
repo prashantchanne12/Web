@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  margin: 2rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid-col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 0.1rem;
+}
+
+.grid-col--2,
+.grid-col--3 {
+  display: none;
+}
+
+.content {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.content h2 {
+  margin: 0.2rem 0.5rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  h1 {
+    margin: 3rem 0;
+  }
+  .grid-col--2 {
+    display: block;
+  }
+  .grid-col {
+    padding: 0 0.5rem;
+  }
+  img {
+    margin-bottom: 0.8rem;
+  }
+  .content {
+    opacity: 0;
+    -webkit-transform: translateX(-0.5rem);
+            transform: translateX(-0.5rem);
+    -webkit-transition: all 2s;
+    transition: all 2s;
+    will-change: opacity, transform;
+  }
+  .grid-item:hover {
+    cursor: pointer;
+  }
+  .grid-item:hover .content {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media (min-width: 1080px) {
+  .grid-col--3 {
+    display: block;
+  }
+  .container {
+    width: 80%;
+  }
+  h1 {
+    margin: 5rem 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
