@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Share </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Amazing Content</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sapiente repudiandae fugit dicta dolores
+            itaque accusamus nulla saepe, veritatis recusandae natus consequatur ab at dolorum quae aliquam rerum
+            commodi corporis.
+        </p>
+        <button>Share this story</button>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="share">
+        <h2>Share Now</h2>
+        <button>Social Link</button>
+        <button>Social Link</button>
+        <button>Social Link</button>
+    </div>
+
+    <script>
+        const shareButton = document.querySelector('button');
+        const overlay = document.querySelector('.overlay');
+        const shareModal = document.querySelector('.share');
+
+        const title = window.document.title;
+        const url = window.document.location.href;
+
+        shareButton.addEventListener('click', () => {
+            if (navigator.share) {
+                navigator.share({
+                    title: `${title}`,
+                    url: `${url}`,
+                }).then(() => {
+                    console.log('Thanks for sharing');
+                }).catch(e => {
+                    console.log(e);
+                })
+            } else {
+                overlay.classList.add('show-share');
+                shareModal.classList.add('show-share');
+            }
+        });
+
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('show-share');
+        });
+    </script>
+
+</body>
+
+</html>
