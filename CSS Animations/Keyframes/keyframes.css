@@ -1,0 +1,55 @@
+body {
+  background: #333;
+}
+
+.box {
+  background: #fff;
+  width: 200px;
+  height: 200px;
+  position: relative;
+
+  animation-name: my;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier();
+  animation-fill-mode: forwards;
+}
+
+@keyframes my {
+  0% {
+    background: #fff;
+    left: 0px;
+    top: 0px;
+    border-radius: 0;
+  }
+
+  25% {
+    background: coral;
+    left: 300px;
+    top: 0px;
+    border-radius: 50% 0 0 0;
+  }
+
+  50% {
+    background: cadetblue;
+    left: 300px;
+    top: 300px;
+    border-radius: 50% 50% 0 0;
+  }
+
+  75% {
+    background: teal;
+    left: 0;
+    top: 300px;
+    border-radius: 50% 50% 50% 0;
+  }
+
+  100% {
+    background: #fff;
+    left: 0px;
+    top: 0px;
+    border-radius: 50% 50% 50% 50%;
+  }
+}

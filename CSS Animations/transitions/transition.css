@@ -1,0 +1,29 @@
+body {
+  background: #333;
+}
+
+.box {
+  background: #fff;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  top: 200px;
+
+  /* 
+  FOR ALL COMPONENTS
+  transition-property: all;
+  transition-duration: 1s;
+   */
+
+  transition-property: background, border-radius, transform;
+  transition-duration: 0.5s, 1s;
+  /* transition-delay: 1s; */
+  transition-timing-function: cubic-bezier();
+}
+
+.box:hover {
+  background: coral;
+  border-radius: 50%;
+  transform: rotate(270deg);
+}
